@@ -1,6 +1,5 @@
 <style>
-    body {
-  
+body {
   overflow: hidden;
 }
 
@@ -74,7 +73,6 @@
   left: 0;
   height: 3px;
   width: 100%;
-
 }
 
 .toast .progress:before {
@@ -96,10 +94,7 @@
     right: 100%;
   }
 }
-
 </style>
-
-
 
 <!-- Remove 'active' class, this is just to show in Codepen thumbnail -->
 <div class="toast active">
@@ -118,26 +113,23 @@
   <div class="progress active"></div>
 </div>
 
-
-
 <script>
-     toast = document.querySelector(".toast");
-(closeIcon = document.querySelector(".close")),
-  (progress = document.querySelector(".progress"));
+toast = document.querySelector(".toast");
+(closeIcon = document.querySelector(".close"));
+(progress = document.querySelector(".progress"));
 
 let timer1, timer2;
 
+toast.classList.add("active");
+progress.classList.add("active");
 
-  toast.classList.add("active");
-  progress.classList.add("active");
-
-  timer1 = setTimeout(() => {
+timer1 = setTimeout(() => {
     toast.classList.remove("active");
-  }, 5000); //1s = 1000 milliseconds
+}, 5000); //1s = 1000 milliseconds
 
-  timer2 = setTimeout(() => {
+timer2 = setTimeout(() => {
     progress.classList.remove("active");
-  }, 5300);
+}, 5300);
 
 
 closeIcon.addEventListener("click", () => {
@@ -150,5 +142,4 @@ closeIcon.addEventListener("click", () => {
   clearTimeout(timer1);
   clearTimeout(timer2);
 });
-
 </script>
