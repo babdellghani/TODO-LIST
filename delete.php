@@ -1,5 +1,4 @@
 <?php
-
     require_once 'connect.php';
     $id = $_GET['id'];
     $state = $PDO->prepare('DELETE FROM todos WHERE id = ?');
@@ -10,3 +9,4 @@
     } else {
         echo 'Error, Not Deleted';
     }
+?>
